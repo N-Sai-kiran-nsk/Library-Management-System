@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Issue & Return</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">📚 MyLibrary</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="issue-return.html" class="active">Issue/Return</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+      <div class="role-select">
+        <label for="user-role">Role:</label>
+        <select id="user-role">
+          <option value="admin">Admin</option>
+          <option value="member">Member</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <h1>📦 Issue & Return Books</h1>
+      <p>Assign books to members and manage returns.</p>
+    </section>
+
+    <section class="issue-form">
+      <h2>Issue Book</h2>
+      <form id="issueForm">
+        <label for="memberSelect">Select Member:</label>
+        <select id="memberSelect" required>
+        </select>
+
+        <label for="bookSelect">Select Book:</label>
+        <select id="bookSelect" required>
+        </select>
+
+        <label for="issueDate">Issue Date:</label>
+        <input type="date" id="issueDate" required />
+
+        <button type="submit">Issue Book</button>
+      </form>
+    </section>
+
+    <section class="issued-list">
+      <h2>Currently Issued Books</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Book</th>
+            <th>Member</th>
+            <th>Issue Date</th>
+            <th>Return Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="issueTableBody">
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+  <footer>
+    <p>&copy; 2025 Library Management System. All rights reserved.</p>
+  </footer>
+
+  <script src="js/issueReturn.js"></script>
+</body>
+</html>

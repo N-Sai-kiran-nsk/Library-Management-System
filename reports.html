@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reports & Analytics</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">📚 MyLibrary</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="issue-return.html">Issue/Return</a></li>
+        <li><a href="reports.html" class="active">Reports</a></li>
+      </ul>
+      <div class="role-select">
+        <label for="user-role">Role:</label>
+        <select id="user-role">
+          <option value="admin">Admin</option>
+          <option value="member">Member</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+
+    <section class="welcome">
+      <h1>📊 Library Reports & Analytics</h1>
+      <p>View insights into library usage and activity.</p>
+    </section>
+
+    <section class="report-section">
+      <h2>📘 Most Issued Books</h2>
+      <canvas id="topBooksChart" height="200"></canvas>
+    </section>
+
+    <section class="report-section">
+      <h2>📅 Books Issued Per Month</h2>
+      <canvas id="booksPerMonthChart" height="200"></canvas>
+    </section>
+
+    <section class="report-section">
+      <h2>👤 Most Active Members</h2>
+      <canvas id="activeMembersChart" height="200"></canvas>
+    </section>
+
+  </main>
+  <footer>
+    <p>&copy; 2025 Library Management System. All rights reserved.</p>
+  </footer>
+
+  <script src="js/reports.js"></script>
+</body>
+</html>

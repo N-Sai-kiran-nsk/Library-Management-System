@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Member Management</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">📚 MyLibrary</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="members.html" class="active">Members</a></li>
+        <li><a href="issue-return.html">Issue/Return</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+      <div class="role-select">
+        <label for="user-role">Role:</label>
+        <select id="user-role">
+          <option value="admin">Admin</option>
+          <option value="member">Member</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <h1>👤 Member Management</h1>
+      <p>Add, edit, and manage registered library members.</p>
+    </section>
+
+    <section class="member-form">
+      <h2>Add / Edit Member</h2>
+      <form id="memberForm">
+        <input type="hidden" id="member-id" />
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="membershipId">Membership ID:</label>
+        <input type="text" id="membershipId" required />
+
+        <label for="joinedDate">Joined Date:</label>
+        <input type="date" id="joinedDate" required />
+
+        <button type="submit">Save Member</button>
+      </form>
+    </section>
+
+    <section class="member-list">
+      <h2>Registered Members</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Membership ID</th>
+            <th>Joined Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="memberTableBody">
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Library Management System. All rights reserved.</p>
+  </footer>
+
+  <script src="js/members.js"></script>
+</body>
+</html>
